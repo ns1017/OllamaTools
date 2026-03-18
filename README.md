@@ -39,11 +39,11 @@ Core capabilities include:
 
 - Windows (current implementation targets cmd/Windows behavior)
 - Python 3.10+
-- Ollama installed and available in PATH
+- Ollama installed and available in PATH; Download here: https://ollama.com/
 - A local Ollama model pulled and configured in the script, Ollama running
-- A Vosk model folder in the directory at:
+- A Vosk model folder in the directory project directory like:
   - `models/vosk-model-small-en-us-0.15`
-- A Vosk model configured if the default is not used
+- Download a Vosk model here, I recommend the one above; models can be found here: https://alphacephei.com/vosk/models
 
 Python packages used by the main script:
 
