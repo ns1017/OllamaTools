@@ -3,6 +3,7 @@
 OllamaTools is a personal-assistant project that expands local LLMs that do not include native tool use by default.
 
 This repository provides an expansion to models that don't come with tool capabilities by default with a personal assistant focus.
+It also works with tools that are built with tool calling, possibly making tool triggers cleaner.
 
 ## What It Does
 
@@ -19,6 +20,12 @@ Core capabilities include:
 - Environment discovery tool for reliable OS-aware behavior
 - Conversation persistence and interaction logging
 - Limited autonomous continuation with loop and safety guards
+
+## Known Issues
+
+- Probably the most signifigant, the AI rarely is able to correct itself while in an autonomous session. It ends up looping the incorrect function or a tool call incorrectly.
+- While not incompatible with linux, there are built in filters to correct linux cli commands to windows, there may be hallucinations when "get_env" command are used without altering the system prompt or command filter.
+- Some issues with text-to-speech. For example, sometimes switching back from keyboard input does not take precedence over the AI finishing its response. 
 
 ## Project Structure
 
