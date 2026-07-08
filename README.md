@@ -1,8 +1,6 @@
 # OllamaTools
 
 OllamaTools is a personal-assistant project that expands local LLMs that do not include native tool use by default.
-
-This repository provides an expansion to models that don't come with tool capabilities by default with a personal assistant focus.
 It also works with tools that are built with tool calling, possibly making tool triggers cleaner.
 
 ## What It Does
@@ -19,13 +17,13 @@ Core capabilities include:
 - Python code creation and execution helpers (`code_dev`, `code_exec`)
 - Environment discovery tool for reliable OS-aware behavior
 - Conversation persistence and interaction logging
-- Limited autonomous continuation with loop and safety guards
+- Limited & potentially unlimted autonomous continuation with loop and safety guards (know true autonomous/autopilot mode is now a seperate input)
 
 ## Known Issues
 
-- Probably the most signifigant, the AI rarely is able to correct itself while in an autonomous session. It ends up looping the incorrect function or a tool call incorrectly.
-- While not incompatible with linux, there are built in filters to correct linux cli commands to windows, there may be hallucinations when "get_env" command are used without altering the system prompt or command filter.
+- While not incompatible with linux, there are built in filters to correct linux cli commands to windows, there may be hallucinations when "get_env" commands are used without altering the system prompt or command filter.
 - Some issues with text-to-speech. For example, sometimes switching back from keyboard input does not take precedence over the AI finishing its response. 
+- Issue occurs when a new chat is started. For some reason (most likely prompted by the ai), a continuation hides the inital AI response from the chat stream and only shows the final response. It can be viewed in the context history though.
 
 ## Project Structure
 
@@ -34,6 +32,7 @@ Core capabilities include:
 - `conversation_history.json`: Persistent chat history, generated after first run.
 - `interaction_log.txt`: Runtime and event logs, generated after first run.
 - `app_settings.json`: Local app configuration
+- `.env`: contains sensitive keys/tokens that should generally be hidden from the AI. Now used for telegram configuration.
 
 ## Requirements
 
@@ -113,6 +112,7 @@ The assistant instructs the LLM to emit strict XML-like tags for tool routing:
 - `<code_dev>...</code_dev>`
 - `<code_exec>...</code_exec>`
 - `<continue>...</continue>`
+- `<soul_write>...</soul_write> - acts as a unique long term memory that it semi hidden from the user. it's loaded at the start of every new context like the system prompt. Technically, the AI could prompt inject a robot revolution without the user ever knowing.
 
 These are parsed and executed in a guarded loop with iteration limits.
 
@@ -126,18 +126,18 @@ These are parsed and executed in a guarded loop with iteration limits.
 ## Configuration Notes
 
 - TTS defaults can be overridden with `tts_settings.json`.
-- `.env` can be added for future Telegram integration but Telegram features are currently commented out.
+- `.env` can be added for Telegram integration but Telegram features aren't fully implimented. i.e sending images, voice recordings, and files
 - Conversation and event logs are written locally by default.
 
 ## Roadmap Ideas
 
-- Wake word for speech-to-text
 - DJ mode for playing and queing music 
 - Stronger command sandboxing and allowlist-based shell policy
-- Better context pruning and memory management
 - More robust retry and tool-failure classification
 - Cross-platform command abstraction beyond Windows
-- Optional remote control integration (Telegram)
+- Finish remote control integration via Telegram (send/recieve voice is the goal).
+- Image reading (for vision-language models)
+- impliment an audio pipeline for models that support audio injestion for desktop/video and sound files (as opposed to relying on whisper transcription for everything).
 
 ## License
 
