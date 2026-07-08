@@ -75,10 +75,10 @@ pip install sounddevice vosk requests pyttsx3 ddgs keyboard python-dotenv
 ollama serve
 ```
 
-4. Pull a model (huihui_ai/orchestrator-abliterated:8b used in personal testing):
+4. Pull a model (huihui_ai/gemma4-abliterated:12b used in personal testing):
 
 ```powershell
-ollama pull huihui_ai/orchestrator-abliterated:8b
+ollama pull huihui_ai/gemma4-abliterated:12b
 ```
 
 5. Configure your model in voice_ollama_v1_release.py
@@ -100,7 +100,9 @@ During runtime:
 - `m`: Toggle bot mute
 - `i`: Toggle mic mute
 - `q`: Quit
-- `Ctrl+Shift+K`: Toggle speech/keyboard input mode
+- `Ctrl+Shift+K`: Toggle speech/keyboard input mode *Note that keyboard input will disable the commands above until toggled again.
+- `Ctrl+Shift+T`: Toggle telegram streaming (disables other inputs for saftey)
+- `Ctrl+Shift+A`: Toggle Autonomous mode. Toggle the mode first, then prompt.
 
 ## Tooling Model
 
