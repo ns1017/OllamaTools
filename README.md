@@ -75,10 +75,10 @@ pip install sounddevice vosk requests pyttsx3 ddgs keyboard python-dotenv
 ollama serve
 ```
 
-4. Pull a model (huihui_ai/gemma4-abliterated:12b used in personal testing):
+4. Pull a model (huihui_ai/gemma4-abliterated:latest used in personal testing):
 
 ```powershell
-ollama pull huihui_ai/gemma4-abliterated:12b
+ollama pull huihui_ai/gemma4-abliterated:latest
 ```
 
 5. Configure your model in voice_ollama_v1_release.py
