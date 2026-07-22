@@ -35,7 +35,7 @@ your `config.json` falls back to the default.
 
 <img width="762" height="1275" alt="2" src="https://github.com/user-attachments/assets/80eb3dc0-db55-4197-bcd7-7c26bc6c10b8" />
 
--.ics link will need uploaded
+- .ics link will need uploaded
 - Excluded Terms will vary system to system
 
 <img width="952" height="235" alt="3" src="https://github.com/user-attachments/assets/700c8829-5f64-4417-8cfb-1458c2b6d44d" />
