@@ -1,0 +1,32 @@
+# Core
+requests>=2.31
+python-dotenv>=1.0
+
+# Speech
+vosk>=0.3.45
+sounddevice>=0.4.6
+pyttsx3>=2.90
+
+# Web search
+ddgs>=1.0
+
+# Windows-only hotkeys/controls (this assistant is Windows-oriented: msvcrt,
+# tasklist-based peek, cmd.exe shell commands)
+keyboard>=0.13.5
+
+# Optional: cam_peek (webcam + person detection)
+opencv-python>=4.9
+ultralytics>=8.2
+
+# Optional: DJ mode also needs yt-dlp and ffmpeg/ffplay on PATH (not pip
+# installable as ffmpeg itself — install separately and add to PATH)
+yt-dlp>=2024.4.9
+
+# Optional: .ics calendar integration
+icalendar>=7.2.0
+recurring-ical-events>=3.8.2
+
+# Optional: Gmail integration (requires Google API credentials)
+google-api-python-client>=2.198.0
+google-auth-httplib2>=0.4.0
+google-auth-oauthlib>=1.4.0
