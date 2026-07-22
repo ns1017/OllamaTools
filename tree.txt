@@ -1,0 +1,42 @@
+│   config.json*1
+│   gmail_credentials.json*2
+│   main.py
+│   README.md
+│   requirements.txt
+│   yolov8n.pt*3
+│   cookies.txt*4
+│   .env*5
+│
+├───jarvis
+│   │   audio_io.py
+│   │   capabilities.py
+│   │   config.py
+│   │   logging_utils.py
+│   │   memory.py
+│   │   ollama_client.py
+│   │   session.py
+│   │   soul.py
+│   │   system_prompt.py
+│   │   telegram_bot.py*5
+│   │   text_utils.py
+│   │   __init__.py
+│   │
+│   └───tools
+│           dj_mode.py*4
+│           gmail.py*2
+│           media.py
+│           school_calendar.py*1
+│           shell.py
+│           vision.py*3
+│           web_search.py
+│           __init__.py
+│
+├───models
+│   └───vosk-model-small-en-us-0.15
+├───peek_imgs
+├───telegram_audio
+├───telegram_files
+├───telegram_images
+└───telegram_voice_replies
+
+*Config variables for certain tools rely on specific files, i.e. vision.py relies on yolov8n.pt existing.
