@@ -6,10 +6,8 @@ package, with every tunable value pulled into `config.json`.
 ## config.json reference
 
 Every field has a built-in default (see `jarvis/config.py`), so
-`config.json` is optional — if it's missing, the assistant runs with the
-same defaults the original script had hardcoded. Any field you omit from
-your `config.json` falls back to the default; you only need to include what
-you want to change.
+`config.json` technically optional. Any field you omit from
+your `config.json` falls back to the default.
 
 | Section | Purpose |
 |---|---|
