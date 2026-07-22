@@ -110,7 +110,7 @@ Python packages used by the main script:
 1. Create and activate a virtual environment:
 
 ```powershell
-python -m venv venv
+python -m venv .venv
 .\venv\Scripts\Activate.ps1
 ```
 
