@@ -120,7 +120,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. Ensure Ollama is installed and running (or don't 😉  now starts automatically):
+3. Ensure Ollama is installed and running:
 
 ```powershell
 ollama serve
