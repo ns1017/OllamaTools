@@ -29,8 +29,8 @@ CONFIG_PATH_ENV_VAR = "JARVIS_CONFIG_PATH"
 DEFAULT_CONFIG = {
     "assistant": {
         "name": "Jarvis",
-        "host_name": "Noah",
-        "system_prompt_version": "jarvis_v1.8",
+        "host_name": "Host",
+        "system_prompt_version": "jarvis_v2",
     },
     "features": {
         "web_search": True,
@@ -98,7 +98,7 @@ DEFAULT_CONFIG = {
     "web_search": {
         "max_results": 3,
         "cache_ttl_seconds": 30,
-        "blocked_keywords": ["Natal", "Noah Smith", "your search query here", "<query>"],
+        "blocked_keywords": ["your search query here", "<query>"],
     },
     "gmail": {
         # OAuth client secret downloaded from Google Cloud Console (Desktop
